@@ -1,21 +1,21 @@
 "use client";
 
-import Header from "./Header";
-import Hero from "./Hero";
-import Features from "./Features";
-import Testimonials from "./Testimonials";
-import ContactForm from "./ContactForm";
-import Footer from "./Footer";
+import { Navbar } from '@/components/Navbar';
+import { Hero } from '@/components/Hero';
+import { Features } from '@/components/Features';
+import { Testimonials } from '@/components/Testimonials';
+import { Contact } from '@/components/Contact';
+import { Footer } from '@/components/Footer';
 
 export default function Page() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
+    <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <Navbar />
       <main className="flex-grow">
-        <section id="hero"><Hero /></section>
-        <section id="features"><Features /></section>
-        <section id="testimonials"><Testimonials /></section>
-        <section id="contact"><ContactForm /></section>
+        <Hero />
+        <Features />
+        <Testimonials />
+        <Contact />
       </main>
       <Footer />
     </div>
